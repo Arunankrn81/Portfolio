@@ -12,46 +12,70 @@
 body{
 margin:0;
 font-family:Arial;
-background:#0b0c10;
+background:radial-gradient(circle at top, #111827, #0b0c10);
 color:white;
 scroll-behavior:smooth;
 }
 
+/* HERO TEXT GLOW */
+.glow{
+text-shadow:0 0 25px rgba(0,229,255,0.5);
+}
+
+/* SECTION */
 .section{
 padding:90px 20px;
 max-width:1100px;
 margin:auto;
 }
 
+/* PREMIUM CARD */
 .card{
-background:rgba(255,255,255,0.05);
-padding:18px;
-border-radius:14px;
+background:rgba(255,255,255,0.04);
+padding:22px;
+border-radius:16px;
 border:1px solid rgba(255,255,255,0.08);
-transition:0.3s;
+transition:0.35s;
+backdrop-filter: blur(10px);
 }
 .card:hover{
+transform:translateY(-6px);
 border-color:#00e5ff;
-transform:translateY(-4px);
+box-shadow:0 0 25px rgba(0,229,255,0.15);
 }
 
+/* BUTTON */
 .btn{
-padding:10px 16px;
+padding:12px 18px;
 border-radius:10px;
 font-weight:bold;
 font-size:13px;
 display:inline-block;
+transition:0.3s;
 }
 
 .btn-primary{
 background:#00e5ff;
 color:black;
 }
+.btn-primary:hover{opacity:0.85;}
 
 .btn-dark{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.06);
 color:white;
 border:1px solid rgba(255,255,255,0.2);
+}
+.btn-dark:hover{border-color:#00e5ff;}
+
+/* GRID HOVER EFFECT */
+.project-title{
+font-size:18px;
+font-weight:bold;
+}
+.project-desc{
+color:#9ca3af;
+font-size:13px;
+margin-top:8px;
 }
 </style>
 </head>
@@ -61,22 +85,22 @@ border:1px solid rgba(255,255,255,0.2);
 <!-- HERO -->
 <section class="section text-center">
 
-<h1 class="text-5xl font-bold">
+<h1 class="text-5xl md:text-7xl font-bold glow">
 Arunan Karunawatharan
 </h1>
 
-<h2 class="text-2xl mt-2 text-cyan-400 font-semibold">
+<h2 class="text-2xl mt-3 text-cyan-400 font-semibold">
 UI/UX & Web Designer
 </h2>
 
-<p class="mt-4 text-gray-300 max-w-xl mx-auto">
-Specialized in Gaming UI, E-commerce UX, and modern responsive web design using Wix Studio, Shopify, WordPress, and Webflow.
+<p class="mt-5 text-gray-300 max-w-xl mx-auto">
+I design modern, interactive and high-conversion digital experiences for gaming platforms, e-commerce systems and web applications.
 </p>
 
-<div class="mt-6 flex justify-center gap-3 flex-wrap">
+<div class="mt-8 flex justify-center gap-3 flex-wrap">
 
 <a href="#projects" class="btn btn-primary">View Projects</a>
-<a href="Arunan_CV.pdf" class="btn btn-dark">Download CV</a>
+<a href="Arunan_CV.pdf" class="btn btn-dark" target="_blank">Download CV</a>
 <a href="#contact" class="btn btn-dark">Hire Me</a>
 
 </div>
@@ -92,7 +116,7 @@ Specialized in Gaming UI, E-commerce UX, and modern responsive web design using 
 <h2 class="text-3xl font-bold mb-4">About Me</h2>
 
 <p class="text-gray-300 leading-relaxed">
-I am a UI/UX & Web Designer with strong experience in building interactive gaming UI concepts, e-commerce platforms, and CMS-based websites. I focus on user experience, layout structure, and modern visual storytelling.
+I am a UI/UX & Web Designer with strong experience in building immersive gaming UI systems, e-commerce UX flows, and responsive CMS-based websites using Wix Studio, Shopify, WordPress, and Webflow. I focus on clarity, usability, and modern visual storytelling.
 </p>
 </section>
 
@@ -106,8 +130,8 @@ I am a UI/UX & Web Designer with strong experience in building interactive gamin
 <div class="card">Gaming UI Systems</div>
 <div class="card">E-commerce UX (Shopify)</div>
 <div class="card">Wix Studio / WordPress</div>
-<div class="card">Responsive Design</div>
-<div class="card">Basic Analytics (Power BI)</div>
+<div class="card">Responsive Web Design</div>
+<div class="card">Power BI (Basic Analytics)</div>
 
 </div>
 </section>
@@ -115,51 +139,59 @@ I am a UI/UX & Web Designer with strong experience in building interactive gamin
 <!-- PROJECTS -->
 <section class="section" id="projects">
 
-<h2 class="text-3xl font-bold mb-6">Featured Projects</h2>
+<h2 class="text-3xl font-bold mb-6">Featured Case Studies</h2>
 
-<div class="grid md:grid-cols-2 gap-4">
+<div class="grid md:grid-cols-2 gap-6">
 
+<!-- GAMING -->
 <div class="card">
-<h3 class="text-xl font-bold">🎮 Gaming UI Concept</h3>
-<p class="text-gray-400 text-sm mt-2">
-Immersive gaming UI with leaderboard, match system, and retro design structure.
-</p>
-
-<div class="mt-3 flex gap-2">
-<a href="#" class="text-cyan-400 text-xs underline">View Gaming site.pdf</a>
+<div class="project-title">🎮 Gaming UI System</div>
+<div class="project-desc">
+Immersive gaming dashboard with leaderboard, match flow, and retro UI experience design.
+</div>
+<div class="mt-4">
+<a href="Gaming%20site.pdf" target="_blank" class="text-cyan-400 text-xs underline">
+Open Gaming Case Study →
+</a>
 </div>
 </div>
 
+<!-- ECOMMERCE -->
 <div class="card">
-<h3 class="text-xl font-bold">🛒 E-commerce UX Design</h3>
-<p class="text-gray-400 text-sm mt-2">
-Clean Shopify-style product layout with conversion-focused UI structure.
-</p>
-
-<div class="mt-3 flex gap-2">
-<a href="#" class="text-cyan-400 text-xs underline">View E-commerce.pdf</a>
+<div class="project-title">🛒 E-commerce UX System</div>
+<div class="project-desc">
+Conversion-focused product layout and structured shopping experience design.
+</div>
+<div class="mt-4">
+<a href="E-commerce.pdf" target="_blank" class="text-cyan-400 text-xs underline">
+Open E-commerce Case Study →
+</a>
 </div>
 </div>
 
+<!-- TRAVEL -->
 <div class="card">
-<h3 class="text-xl font-bold">✈ Travel Booking UI</h3>
-<p class="text-gray-400 text-sm mt-2">
+<div class="project-title">✈ Travel Booking UI</div>
+<div class="project-desc">
 Itinerary-based booking system with filters and structured UX flow.
-</p>
-
-<div class="mt-3 flex gap-2">
-<a href="#" class="text-cyan-400 text-xs underline">View Travel site.pdf</a>
+</div>
+<div class="mt-4">
+<a href="Travel%20site.pdf" target="_blank" class="text-cyan-400 text-xs underline">
+Open Travel Case Study →
+</a>
 </div>
 </div>
 
+<!-- ECO -->
 <div class="card">
-<h3 class="text-xl font-bold">🌿 Eco Awareness Platform</h3>
-<p class="text-gray-400 text-sm mt-2">
-Clean environmental UI with structured content and information hierarchy.
-</p>
-
-<div class="mt-3 flex gap-2">
-<a href="#" class="text-cyan-400 text-xs underline">View Eco Site.pdf</a>
+<div class="project-title">🌿 Eco Awareness Platform</div>
+<div class="project-desc">
+Clean sustainability-focused UI with structured content hierarchy.
+</div>
+<div class="mt-4">
+<a href="Eco%20Site.pdf" target="_blank" class="text-cyan-400 text-xs underline">
+Open Eco Case Study →
+</a>
 </div>
 </div>
 
@@ -175,15 +207,15 @@ Clean environmental UI with structured content and information hierarchy.
 <h3 class="font-bold">UI/UX & Web Designer</h3>
 <p class="text-gray-400 text-sm">2024 - Present</p>
 <p class="text-gray-300 text-sm mt-2">
-Designing gaming UI concepts, e-commerce systems, and responsive web platforms.
+Designing modern UI systems, gaming interfaces, and e-commerce experiences.
 </p>
 </div>
 
 <div class="card mt-4">
-<h3 class="font-bold">Finance & Data Analyst (Previous)</h3>
+<h3 class="font-bold">Finance & Data Analyst Background</h3>
 <p class="text-gray-400 text-sm">2010 - 2023</p>
 <p class="text-gray-300 text-sm mt-2">
-Handled reporting, analytics, and structured business operations systems.
+Handled reporting, analytics, dashboards, and structured business systems.
 </p>
 </div>
 
@@ -192,10 +224,10 @@ Handled reporting, analytics, and structured business operations systems.
 <!-- CONTACT -->
 <section class="section" id="contact">
 
-<h2 class="text-3xl font-bold">Let’s Connect</h2>
+<h2 class="text-3xl font-bold">Let’s Work Together</h2>
 
 <p class="text-gray-400 mt-2">
-Open for UI/UX, Gaming UI, and E-commerce roles.
+Open for UI/UX, Gaming UI, and E-commerce design roles.
 </p>
 
 <div class="mt-4 text-sm text-gray-400">
