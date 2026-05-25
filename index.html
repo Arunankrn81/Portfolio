@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arunan Karunawatharan - UI/UX & Web Designer</title>
+<title>Arunan Karunawatharan - UI/UX Designer</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,39 +12,46 @@
 body{
 margin:0;
 font-family:Arial;
-background:radial-gradient(circle at top, #111827, #0b0c10);
+background: radial-gradient(circle at top, #0f172a, #050608);
 color:white;
 scroll-behavior:smooth;
 }
 
-/* HERO TEXT GLOW */
-.glow{
-text-shadow:0 0 25px rgba(0,229,255,0.5);
-}
-
-/* SECTION */
+/* GLOBAL LAYOUT */
 .section{
-padding:90px 20px;
+padding:100px 20px;
 max-width:1100px;
 margin:auto;
 }
 
-/* PREMIUM CARD */
+/* GLASS CARD (PREMIUM) */
 .card{
 background:rgba(255,255,255,0.04);
-padding:22px;
-border-radius:16px;
 border:1px solid rgba(255,255,255,0.08);
+padding:22px;
+border-radius:18px;
+backdrop-filter: blur(14px);
 transition:0.35s;
-backdrop-filter: blur(10px);
+position:relative;
+overflow:hidden;
 }
+
 .card:hover{
 transform:translateY(-6px);
 border-color:#00e5ff;
-box-shadow:0 0 25px rgba(0,229,255,0.15);
+box-shadow:0 0 30px rgba(0,229,255,0.15);
 }
 
-/* BUTTON */
+/* TITLE SYSTEM */
+h1,h2,h3{
+letter-spacing:-0.5px;
+}
+
+.glow{
+text-shadow:0 0 25px rgba(0,229,255,0.4);
+}
+
+/* BUTTONS */
 .btn{
 padding:12px 18px;
 border-radius:10px;
@@ -54,28 +61,50 @@ display:inline-block;
 transition:0.3s;
 }
 
-.btn-primary{
-background:#00e5ff;
+.primary{
+background:linear-gradient(90deg,#00e5ff,#3b82f6);
 color:black;
 }
-.btn-primary:hover{opacity:0.85;}
 
-.btn-dark{
+.dark{
 background:rgba(255,255,255,0.06);
-color:white;
 border:1px solid rgba(255,255,255,0.2);
+color:white;
 }
-.btn-dark:hover{border-color:#00e5ff;}
 
-/* GRID HOVER EFFECT */
+.dark:hover{
+border-color:#00e5ff;
+}
+
+/* PROJECT GRID */
 .project-title{
 font-size:18px;
-font-weight:bold;
+font-weight:700;
 }
+
 .project-desc{
-color:#9ca3af;
 font-size:13px;
+color:#a1a1aa;
 margin-top:8px;
+line-height:1.5;
+}
+
+/* SECTION HEAD */
+.section-title{
+font-size:28px;
+font-weight:800;
+margin-bottom:20px;
+position:relative;
+}
+
+.section-title::after{
+content:"";
+display:block;
+width:60px;
+height:3px;
+background:#00e5ff;
+margin-top:8px;
+border-radius:5px;
 }
 </style>
 </head>
@@ -85,7 +114,7 @@ margin-top:8px;
 <!-- HERO -->
 <section class="section text-center">
 
-<h1 class="text-5xl md:text-7xl font-bold glow">
+<h1 class="text-6xl font-bold glow">
 Arunan Karunawatharan
 </h1>
 
@@ -93,15 +122,15 @@ Arunan Karunawatharan
 UI/UX & Web Designer
 </h2>
 
-<p class="mt-5 text-gray-300 max-w-xl mx-auto">
-I design modern, interactive and high-conversion digital experiences for gaming platforms, e-commerce systems and web applications.
+<p class="mt-5 text-gray-300 max-w-2xl mx-auto">
+I design immersive digital experiences for gaming platforms, e-commerce systems, and modern interactive web applications.
 </p>
 
 <div class="mt-8 flex justify-center gap-3 flex-wrap">
 
-<a href="#projects" class="btn btn-primary">View Projects</a>
-<a href="Arunan_CV.pdf" class="btn btn-dark" target="_blank">Download CV</a>
-<a href="#contact" class="btn btn-dark">Hire Me</a>
+<a href="#projects" class="btn primary">View Work</a>
+<a href="Arunan_CV.pdf" target="_blank" class="btn dark">Download CV</a>
+<a href="#contact" class="btn dark">Hire Me</a>
 
 </div>
 
@@ -113,25 +142,25 @@ I design modern, interactive and high-conversion digital experiences for gaming 
 
 <!-- ABOUT -->
 <section class="section">
-<h2 class="text-3xl font-bold mb-4">About Me</h2>
+<h2 class="section-title">About Me</h2>
 
-<p class="text-gray-300 leading-relaxed">
-I am a UI/UX & Web Designer with strong experience in building immersive gaming UI systems, e-commerce UX flows, and responsive CMS-based websites using Wix Studio, Shopify, WordPress, and Webflow. I focus on clarity, usability, and modern visual storytelling.
+<p class="text-gray-300 leading-relaxed max-w-3xl">
+I am a UI/UX Designer focused on building high-quality digital experiences with strong emphasis on usability, visual hierarchy, and modern interface systems. I specialize in gaming UI systems, e-commerce UX flows, and CMS-based web platforms.
 </p>
 </section>
 
 <!-- SKILLS -->
 <section class="section">
-<h2 class="text-3xl font-bold mb-6">Skills</h2>
+<h2 class="section-title">Skills</h2>
 
 <div class="grid md:grid-cols-3 gap-4">
 
 <div class="card">UI/UX Design</div>
 <div class="card">Gaming UI Systems</div>
-<div class="card">E-commerce UX (Shopify)</div>
-<div class="card">Wix Studio / WordPress</div>
-<div class="card">Responsive Web Design</div>
-<div class="card">Power BI (Basic Analytics)</div>
+<div class="card">E-commerce UX</div>
+<div class="card">Wix Studio</div>
+<div class="card">Shopify UX</div>
+<div class="card">Responsive Design</div>
 
 </div>
 </section>
@@ -139,60 +168,48 @@ I am a UI/UX & Web Designer with strong experience in building immersive gaming 
 <!-- PROJECTS -->
 <section class="section" id="projects">
 
-<h2 class="text-3xl font-bold mb-6">Featured Case Studies</h2>
+<h2 class="section-title">Featured Case Studies</h2>
 
 <div class="grid md:grid-cols-2 gap-6">
 
-<!-- GAMING -->
 <div class="card">
 <div class="project-title">🎮 Gaming UI System</div>
 <div class="project-desc">
-Immersive gaming dashboard with leaderboard, match flow, and retro UI experience design.
+Designed immersive gaming dashboard with leaderboard, match flow, and modern interaction system.
 </div>
-<div class="mt-4">
-<a href="Gaming%20site.pdf" target="_blank" class="text-cyan-400 text-xs underline">
-Open Gaming Case Study →
+<a class="text-cyan-400 text-xs mt-3 inline-block" href="Gaming%20site.pdf" target="_blank">
+Open Case Study →
 </a>
 </div>
-</div>
 
-<!-- ECOMMERCE -->
 <div class="card">
 <div class="project-title">🛒 E-commerce UX System</div>
 <div class="project-desc">
-Conversion-focused product layout and structured shopping experience design.
+Built structured product browsing experience optimized for conversion and clarity.
 </div>
-<div class="mt-4">
-<a href="E-commerce.pdf" target="_blank" class="text-cyan-400 text-xs underline">
-Open E-commerce Case Study →
+<a class="text-cyan-400 text-xs mt-3 inline-block" href="E-commerce.pdf" target="_blank">
+Open Case Study →
 </a>
 </div>
-</div>
 
-<!-- TRAVEL -->
 <div class="card">
 <div class="project-title">✈ Travel Booking UI</div>
 <div class="project-desc">
-Itinerary-based booking system with filters and structured UX flow.
+Designed itinerary-based booking flow with filters, cards, and structured UX layout.
 </div>
-<div class="mt-4">
-<a href="Travel%20site.pdf" target="_blank" class="text-cyan-400 text-xs underline">
-Open Travel Case Study →
+<a class="text-cyan-400 text-xs mt-3 inline-block" href="Travel%20site.pdf" target="_blank">
+Open Case Study →
 </a>
-</div>
 </div>
 
-<!-- ECO -->
 <div class="card">
-<div class="project-title">🌿 Eco Awareness Platform</div>
+<div class="project-title">🌿 Eco Platform UI</div>
 <div class="project-desc">
-Clean sustainability-focused UI with structured content hierarchy.
+Clean sustainability-focused interface with structured informational hierarchy.
 </div>
-<div class="mt-4">
-<a href="Eco%20Site.pdf" target="_blank" class="text-cyan-400 text-xs underline">
-Open Eco Case Study →
+<a class="text-cyan-400 text-xs mt-3 inline-block" href="Eco%20Site.pdf" target="_blank">
+Open Case Study →
 </a>
-</div>
 </div>
 
 </div>
@@ -200,22 +217,21 @@ Open Eco Case Study →
 
 <!-- EXPERIENCE -->
 <section class="section">
-
-<h2 class="text-3xl font-bold mb-6">Experience</h2>
+<h2 class="section-title">Experience</h2>
 
 <div class="card">
 <h3 class="font-bold">UI/UX & Web Designer</h3>
 <p class="text-gray-400 text-sm">2024 - Present</p>
 <p class="text-gray-300 text-sm mt-2">
-Designing modern UI systems, gaming interfaces, and e-commerce experiences.
+Designing gaming UI systems, e-commerce experiences, and modern web interfaces.
 </p>
 </div>
 
 <div class="card mt-4">
-<h3 class="font-bold">Finance & Data Analyst Background</h3>
+<h3 class="font-bold">Finance & Data Analyst</h3>
 <p class="text-gray-400 text-sm">2010 - 2023</p>
 <p class="text-gray-300 text-sm mt-2">
-Handled reporting, analytics, dashboards, and structured business systems.
+Experience in structured systems, reporting, analytics, and business operations.
 </p>
 </div>
 
@@ -224,26 +240,25 @@ Handled reporting, analytics, dashboards, and structured business systems.
 <!-- CONTACT -->
 <section class="section" id="contact">
 
-<h2 class="text-3xl font-bold">Let’s Work Together</h2>
+<h2 class="section-title">Let’s Connect</h2>
 
-<p class="text-gray-400 mt-2">
-Open for UI/UX, Gaming UI, and E-commerce design roles.
+<p class="text-gray-400">
+Open for UI/UX Designer roles, gaming UI projects, and e-commerce UX opportunities.
 </p>
 
 <div class="mt-4 text-sm text-gray-400">
 <p>Email: arunankrn81@gmail.com</p>
 <p>Phone: +971 56 985 3322</p>
-<p>LinkedIn: arunan-karunawatharan</p>
 </div>
 
-<a href="mailto:arunankrn81@gmail.com" class="btn btn-primary mt-6">
+<a href="mailto:arunankrn81@gmail.com" class="btn primary mt-6">
 Hire Me Now
 </a>
 
 </section>
 
 <footer class="text-center text-xs text-gray-500 py-10">
-© 2026 Arunan Karunawatharan | UI/UX & Web Designer
+© 2026 Arunan Karunawatharan | UI/UX Designer
 </footer>
 
 </body>
